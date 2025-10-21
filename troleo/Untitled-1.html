@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Búsqueda Rápida en Caché - Juego Educativo</title>
+    <link rel="stylesheet" href="styles.css"> </head>
+<body>
+    <div class="container">
+        <h1>Simulador de Memoria Cachév</h1>
+        <p class="description">Haz clic en el Dato Solicitado lo más rápido posible. Si está en la (Caché L1), es un Acierto (Hit) y obtienes más puntos. Si falla, tienes que ir a la L2 o RAM (Fallo/Miss).</p>
+
+        <div class="stats-panel">
+            <div class="stat">Puntos: <span id="score">0</span></div>
+            <div class="stat">Tiempo Restante: <span id="timer">30</span>s</div>
+            <div class="stat">Dato Solicitado: <span id="requested-data">?</span></div>
+        </div>
+
+        <div class="memory-levels">
+            <div id="l1-cache" class="memory-level l1">
+                <h2 style="background-color: aliceblue;">Caché L1 (CPU)</h2>
+                <div class="data-blocks" id="l1-blocks">
+                    </div>
+                <p class="speed-info" style="background-color: aliceblue;">Velocidad: ¡Muy Rápida!</p>
+            </div>
+
+            <div id="ram" class="memory-level ram">
+                <h2 style="background-color: aliceblue;">RAM (Memoria Principal)</h2>
+                <div class="data-blocks" id="ram-blocks">
+                    </div>
+                <p class="speed-info" style="background-color: aliceblue;">Velocidad: Lenta</p>
+            </div>
+        </div>
+        
+        <button id="start-button">Iniciar Simulación</button>
+
+        <div id="message" class="message"></div>
+    </div>
+
+    <script src="script.js"></script> </body>
+</html>
